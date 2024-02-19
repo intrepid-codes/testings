@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Borel&display=swap');
 @font-face{
   font-family: Gil;
-  src: './Gilroy-Black.ttf';
+  src: 'https://github.com/intrepid-codes/testings/blob/main/Gilroy-Black.ttf';
 }
 *{
   margin: 0;
