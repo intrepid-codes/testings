@@ -40,7 +40,7 @@ Shery.textAnimate("#portfolio", {
   y: 10,
   opacity: 0,
   stagger: 0.1,
-  duration: 1
+  duration: 2
 });
 tl.to("#loader",{
   delay: 1.4,
@@ -50,7 +50,6 @@ tl.to("#loader",{
   delay: -.6,
   display: "none"
 });
-
 document.querySelector("#portfolioContent>img").addEventListener("mousemove", function(){
   gsap.to(".mousefollower", {
     scale: 4
@@ -61,12 +60,7 @@ document.querySelector("#portfolioContent>img").addEventListener("mouseleave", f
     scale: 1
     });
 });
-var clutter = "";
-document.querySelectorAll("#pText>h1").textContent.split(" ").forEach(function(dets){
-  clutter += `<div><span>${dets}</span></div> `;
-  document.querySelector("#pText>h1").innerHTML = clutter;
-});
-gsap.from("#pText>h1>div>span", {
+gsap.from(".pText>h1>div>span", {
   rotate: "20deg",
   y:100,
   duration: 1,
@@ -75,25 +69,7 @@ gsap.from("#pText>h1>div>span", {
   scrollTrigger: {
     trigger: "#page2",
     scroller: "body",
-    start: "top bottom",
+    start: "1% bottom",
     end: "bottom top"
   },
 });
-
-
-
-
-
-if (screen.width > 940) {
-  gsap.to("#animImg", {
-  scrollTrigger: {
-    target: "#animImg",
-    start: "top top",
-    end: "bottom top",
-    scroller: "#main",
-    scrub: 2
-  },
-  width: "100%",
-  height: "90%"
-});
-}
