@@ -13,7 +13,6 @@
 html, body{
   height: 100%;
   width: 100%;
-  background-color: #dadada;
 }
 .mousefollower{
   display: block;
@@ -37,13 +36,18 @@ nav{
   width: 100vw;
   background-color: #000;
   position: relative;
-  z-index: 99;
 }
 #page2{
+  height: fit-content;
+  width: 100vw;
+  position: relative;
+  background-color: #dadada;
+}
+#page3{
   height: 100vh;
   width: 100vw;
   position: relative;
-  z-index: 99;
+  background-color: #dadada;
 }
 #brand{
   display: flex;
@@ -159,16 +163,15 @@ nav{
   color: #000;
 }
 #loader{
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   position: fixed;
   background-color: #000;
   top: 0;
   left: 0;
   z-index: 99;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-items: center;
 }
 #portfolio span{
   font-size: 20vw;
@@ -191,7 +194,7 @@ nav{
   color: #fff;
 }
 #portfolioContent img{
-  height: 70%;
+  height: 75%;
   width: 84%;
   object-fit: cover;
   object-position: top;
@@ -223,9 +226,9 @@ nav{
 #ptopContent{
   padding: 2rem 6vw;
 }
-#dev{
-  height: 2rem;
-  width: 8rem;
+#dev, #des{
+  width: fit-content;
+  padding: .6rem 1.6rem;
   border: 2px solid black;
   border-radius: 8px;
   display: flex;
@@ -233,24 +236,13 @@ nav{
   justify-content: center;
   margin-top: 2rem;
 }
-#des{
-  height: 2rem;
-  width: 8rem;
-  border: 2px solid black;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
 #imagesDev{
   padding: 1rem;
   background-color: #000;
-  display: flex;
+  display: inline-block;
   width: fit-content;
-  gap: 1rem;
-  padding: 2rem;
   border-radius: 8px;
-  margin-bottom: 2rem;
   margin-top: 1rem;
 }
 #imagesDev img{
@@ -258,36 +250,36 @@ nav{
   aspect-ratio: 4/4;
   width: 4rem;
   padding: .6rem;
+  margin: 1rem;
   border-radius: 10px;
   background-color: #fff;
 }
 #devlopment{
   margin-top: 2rem;
 }
-.pText h1 span{
-  font-family: Gil;
-  font-weight: 900;
-  font-size: 9vh;
-  display: inline-block;
-  overflow: hidden;
+.pText{
+  padding-top: 4vh;
 }
-.pText>h1>div>span{
+.pText>h1{
   height: fit-content;
   width: fit-content;
   line-height: 1;
   letter-spacing: 1px;
+  font-size: 8vh;
 }
 .pText>h1>div{
   display: flex;
   align-items: center;
   justify-content: center;
   display: inline-block;
-  height: 3.5rem;
   width: fit-content;
   overflow: hidden;
   line-height: 1;
   word-spacing: 20px;
   letter-spacing: 1px;
+}
+.pText>h1>div>span{
+  display: inline-block;
 }
 
 
