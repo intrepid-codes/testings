@@ -68,7 +68,7 @@ gsap.from(".pText>h1>div>span", {
   rotate: '30deg',
   scrollTrigger: {
     trigger: "#page2",
-    scroller: "body",
+    scroller: "#main",
     start: "1% bottom",
     end: "bottom top"
   },
